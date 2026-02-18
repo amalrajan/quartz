@@ -11,7 +11,7 @@ PID Isolation in Containers
 PID namespaces are integral to Linux kernel namespaces, designed to provide each group of processes with a unique set of process IDs. This allows processes within a container to function in a separate, isolated environment. The segregation achieved by PID namespaces enhances process management and resource allocation by limiting interactions between processes. This feature is critical in container technologies like Docker and Kubernetes for maintaining process isolation.
 
 
-![PID Isolation in Containers](https://ik.imagekit.io/5jrct2yttdr/amalrajan.github.io/0b413-blank2bdiagram2b252842529_E5Aclu9bF.png?updatedAt=1714870199883)
+![PID Isolation in Containers](https://ik.imagekit.io/5jrct2yttdr/quartz/Drawing%202026-02-18%2020.59.07.excalidraw_Nvg_fA2-H.png)
 
   
 

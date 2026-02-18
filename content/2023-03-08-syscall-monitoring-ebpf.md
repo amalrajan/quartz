@@ -47,7 +47,12 @@ If you're facing trouble setting up BCC tools on your system, consider using my 
 
 Make sure to launch it with
 ```bash
-docker run -it -d --privileged -v /lib/modules:/lib/modules -v /sys:/sys -v /usr/src:/usr/src amalrajan/ubuntu-bcc:focal
+docker run -it -d \
+  --privileged \
+  -v /lib/modules:/lib/modules \
+  -v /sys:/sys \
+  -v /usr/src:/usr/src \
+  amalrajan/ubuntu-bcc:focal
 ```
 
 This command initiates a detached container with privileged access, necessary for syscall monitoring, and mounts the required directories to ensure the container has access to the host's kernel modules and source directories.

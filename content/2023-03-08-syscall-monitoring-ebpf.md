@@ -6,8 +6,8 @@ In this post, I'll demonstrate how you can distinguish between kernel system cal
 
 ## PID Isolation in Containers
 
-PID isolation is one of the foundations on top of which Docker containers are built. In the diagram below, processes P3.1, P3.2 and P3.3 are in a "child namespace". These processes are isolated from the other processes, and cannot see them.
-On the other hand, the reverse is true - processes from the parent namespace can absolutely see those in the child namespace. There is a catch however, the child namespace PIDs are named differently in the context of parent namespace. For example, P3.1 could be seen as P2940 by a process in the parent namespace.
+PID isolation is one of the foundations on top of which Docker containers are built. In the diagram below, processes P3.1, P3.2 and P3.3 are in a “child namespace”. These processes are isolated from the other processes, and cannot see them.
+On the other hand, the reverse is true — processes from the parent namespace can absolutely see those in the child namespace. There is a catch however, the child namespace PIDs are named differently in the context of parent namespace. For example, P3.1 could be seen as P2940 by a process in the parent namespace.
 
 ![PID Isolation in Containers](https://ik.imagekit.io/5jrct2yttdr/quartz/Drawing%202026-02-18%2020.59.07.excalidraw_Nvg_fA2-H.png)
 
@@ -15,7 +15,7 @@ On the other hand, the reverse is true - processes from the parent namespace can
 ## Setting up the test environment
 
 The best way I would suggest is to write a `docker-compose.yml` to spin up a few containers.
-You could then manually SSH into each of them and trigger a filesystem write operation or automate that as well.
+You could then manually SSH into each of them and trigger a file system write operation or automate that as well.
 ## Determining PID Mapping in Docker Containers
 
 To identify process ID (PID) mapping within Docker containers, follow these steps:
@@ -23,7 +23,7 @@ Retrieve the full image ID of the active container. ![Determining PID Mapping in
 
 Use the docker top command to view the PID and parent PID (PPID) mapping. ![Determining PID Mapping in Docker Containers](https://ik.imagekit.io/5jrct2yttdr/amalrajan.github.io/Screenshot%202023-03-09%20201313_1nwZ-fu9D.png?updatedAt=1714870132051)
 
-  If the above step is insufficient, navigate to the directory `/sys/fs/cgroup/unified/docker/<long-image-id>/cgroup.procs` to view PPIDs. You ca write a simple shell script to map these PIDs.
+  If the above step is insufficient, navigate to the directory `/sys/fs/cgroup/unified/docker/<long-image-id>/cgroup.procs` to view parent PIDs. You can write a simple shell script to map these PIDs.
 
 ## Using BCC Tools with PID Parameters
 

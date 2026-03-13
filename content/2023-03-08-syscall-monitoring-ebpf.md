@@ -9,7 +9,7 @@ In this post, I'll demonstrate how you can distinguish between kernel system cal
 PID isolation is one of the foundations on top of which Docker containers are built. In the diagram below, processes P3.1, P3.2 and P3.3 are in a “child namespace”. These processes are isolated from the other processes, and cannot see them.
 On the other hand, the reverse is true — processes from the parent namespace can absolutely see those in the child namespace. There is a catch however, the child namespace PIDs are named differently in the context of parent namespace. For example, P3.1 could be seen as P2940 by a process in the parent namespace.
 
-![PID Isolation in Containers](https://ik.imagekit.io/5jrct2yttdr/quartz/Drawing%202026-02-18%2020.59.07.excalidraw_Nvg_fA2-H.png)
+![PID Isolation in Containers](https://ik.imagekit.io/5jrct2yttdr/quartz/Syscall%20tracing%20with%20eBPF/Drawing%202026-02-18%2020.59.07.excalidraw_Nvg_fA2-H.png?updatedAt=1773435390901)
 
 
 ## Setting up the test environment

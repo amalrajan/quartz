@@ -1,6 +1,6 @@
 ---
 title: Introduction to Yocto
-date: 2026-03-01
+date: 2025-05-01
 ---
 
 Yocto is a collection of tools that help you create a custom Linux image from scratch.

@@ -27,7 +27,15 @@ Use the docker top command to view the PID and parent PID (PPID) mapping. ![Dete
 
 ## Using BCC Tools with PID Parameters
 
-The BPF Compiler Collection (BCC) is a toolkit for developing and executing eBPF (extended Berkeley Packet Filter) programs. BCC provides a variety of pre-built eBPF programs and libraries suitable for system performance monitoring, syscall tracing, and more. BCC tools commonly support the -p flag, allowing users to specify a PID for targeted monitoring. These tools are instrumental in gaining insights into system operations and enhancing security measures within containerized environments.
+https://github.com/iovisor/bcc
+
+The BPF Compiler Collection (BCC) is a toolkit for developing and executing eBPF (extended Berkeley Packet Filter) programs. There is a good chance that there is a pre-written tool for your use case. Here is an example of how to use the `opensnoop` tool to monitor file open syscalls in a specific container.
+
+```bash
+opensnoop -p <pid>
+```
+
+Similarly, most of the tools allow you to pass this flag to filter the output to a specific PID.
 
 ## Bonus
 

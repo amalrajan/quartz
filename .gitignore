@@ -9,4 +9,7 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+<<<<<<< HEAD
 content/Excalidraw
+=======
+>>>>>>> 59b58076016c5e5f09f16ab0395fed02e2ebb72e

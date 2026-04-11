@@ -1,6 +1,8 @@
 ---
 title: Syscall tracing with eBPF
 date: 2023-03-08
+categories: [Linux, eBPF]
+tags: [ebpf, syscalls, docker, tracing]
 ---
 In this post, I'll demonstrate how you can distinguish between kernel system calls made by processes in a multi-container environment using eBPF (extended Berkeley Packet Filter).
 

@@ -1,6 +1,8 @@
 ---
 title: Introduction to Yocto
 date: 2025-05-01
+categories: [Embedded Linux]
+tags: [yocto, bitbake, poky, embedded]
 ---
 
 Yocto is a collection of tools that help you create a custom Linux image from scratch.

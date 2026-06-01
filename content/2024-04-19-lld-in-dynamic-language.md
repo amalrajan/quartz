@@ -1,5 +1,5 @@
 ---
-title: Object Oriented Design in a Dynamically Typed Language
+title: LLD with Python
 date: 2024-04-19
 categories: [Software Engineering, Low Level Design]
 tags: [software-design, low-level-design]
